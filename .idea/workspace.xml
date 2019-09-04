@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5d9d7ca-2aab-4240-b5f6-90423a8b1f5d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eq.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fundo branco.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TesseractOCRX.py" beforeDir="false" afterPath="$PROJECT_DIR$/TesseractOCRX.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e.png" beforeDir="false" afterPath="$PROJECT_DIR$/e.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roi0.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roi1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roi10.png" beforeDir="false" />
