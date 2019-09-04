@@ -1,7 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5d9d7ca-2aab-4240-b5f6-90423a8b1f5d" name="Default Changelist" comment="" />
+    <list default="true" id="a5d9d7ca-2aab-4240-b5f6-90423a8b1f5d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eee.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TesseractOCRX.py" beforeDir="false" afterPath="$PROJECT_DIR$/TesseractOCRX.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/e.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e.png" beforeDir="false" afterPath="$PROJECT_DIR$/e.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roi0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roi1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roi10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roi11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roi12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roi13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roi14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roi15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roi16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roi17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roi18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roi2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roi3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roi4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roi5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roi6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roi7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roi8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roi9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/1-ocr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/10-ocr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/11-ocr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/12-ocr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/13-ocr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/14-ocr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/15-ocr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/16-ocr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/17-ocr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/18-ocr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/2-ocr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/3-ocr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/4-ocr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/5-ocr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/6-ocr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/7-ocr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/8-ocr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/9-ocr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testwe.py" beforeDir="false" afterPath="$PROJECT_DIR$/testwe.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +60,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1QKFT5yF5zBXUdIvoYzOPxQrX8f" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -100,5 +150,18 @@
       <updated>1567511385705</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

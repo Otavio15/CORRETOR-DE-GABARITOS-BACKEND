@@ -32,7 +32,7 @@ class TesseractOCR():
             # cv2.imshow("Escala Cinza", img)
 
             # Binariza imagem
-            ret, img = cv2.threshold(img, 170, 255, cv2.THRESH_BINARY)
+            ret, img = cv2.threshold(img, 240, 255, cv2.THRESH_BINARY)
             #cv2.imshow("Limiar", img)
 
             # Desfoque na Imagem
@@ -46,9 +46,22 @@ class TesseractOCR():
             a += -10
             l += -10
 
-            roi = img[y:y + l, x:x + a]
+            img = img[y:y + l, x:x + a];
 
-            cv2.imwrite("saidas/" + str(i) + "-ocr.png", roi)
+            #############################
+
+            contours, h = cv2.findContours(img, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE);
+            imagem_detectada = 0
+
+            for cnt in contours:
+                perimetro = cv2.arcLength(cnt, True)
+                (x, y, a, l) = cv2.boundingRect(cnt);
+                cv2.rectangle(img, (x, y), (x + a, y + l), (0, 0, 255), 2);
+                imagem_detectada = img[y:y + l, x:x + a];
+
+            #############################
+
+            cv2.imwrite("saidas/" + str(i) + "-ocr.png", img)
 
             imagem = Image.open("saidas/" + str(i) + "-ocr.png");
 
