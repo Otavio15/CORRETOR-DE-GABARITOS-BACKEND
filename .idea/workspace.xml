@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5d9d7ca-2aab-4240-b5f6-90423a8b1f5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eee.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TesseractOCRX.py" beforeDir="false" afterPath="$PROJECT_DIR$/TesseractOCRX.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/e.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e.png" beforeDir="false" afterPath="$PROJECT_DIR$/e.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roi0.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roi1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roi10.png" beforeDir="false" />
@@ -19,7 +15,10 @@
       <change beforePath="$PROJECT_DIR$/imagens/roi16.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roi17.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roi18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roi19.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roi2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roi20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roi21.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roi3.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roi4.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roi5.png" beforeDir="false" />
@@ -37,7 +36,10 @@
       <change beforePath="$PROJECT_DIR$/saidas/16-ocr.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saidas/17-ocr.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saidas/18-ocr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/19-ocr.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saidas/2-ocr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/20-ocr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/21-ocr.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saidas/3-ocr.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saidas/4-ocr.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saidas/5-ocr.png" beforeDir="false" />

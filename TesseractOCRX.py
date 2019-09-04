@@ -35,10 +35,6 @@ class TesseractOCR():
             ret, img = cv2.threshold(img, 240, 255, cv2.THRESH_BINARY)
             #cv2.imshow("Limiar", img)
 
-            # Desfoque na Imagem
-            img = cv2.GaussianBlur(img, (5, 5), 0)
-            # cv2.imshow("Desfoque", img)
-
             (x, y, a, l) = cv2.boundingRect(img)
 
             x += 10
@@ -48,18 +44,9 @@ class TesseractOCR():
 
             img = img[y:y + l, x:x + a];
 
-            #############################
-
-            contours, h = cv2.findContours(img, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE);
-            imagem_detectada = 0
-
-            for cnt in contours:
-                perimetro = cv2.arcLength(cnt, True)
-                (x, y, a, l) = cv2.boundingRect(cnt);
-                cv2.rectangle(img, (x, y), (x + a, y + l), (0, 0, 255), 2);
-                imagem_detectada = img[y:y + l, x:x + a];
-
-            #############################
+            # Desfoque na Imagem
+            img = cv2.GaussianBlur(img, (5, 5), 0)
+            # cv2.imshow("Desfoque", img)
 
             cv2.imwrite("saidas/" + str(i) + "-ocr.png", img)
 
