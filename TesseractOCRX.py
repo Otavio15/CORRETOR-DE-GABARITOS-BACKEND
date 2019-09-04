@@ -32,15 +32,15 @@ class TesseractOCR():
             # cv2.imshow("Escala Cinza", img)
 
             # Binariza imagem
-            ret, img = cv2.threshold(img, 240, 255, cv2.THRESH_BINARY)
+            ret, img = cv2.threshold(img, 180, 255, cv2.THRESH_BINARY)
             #cv2.imshow("Limiar", img)
 
             (x, y, a, l) = cv2.boundingRect(img)
 
-            x += 10
-            y += 10
-            a += -10
-            l += -10
+            x += 5
+            y += 5
+            a += -5
+            l += -5
 
             img = img[y:y + l, x:x + a];
 

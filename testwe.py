@@ -6,7 +6,7 @@ imagem = cv2.imread("e.jpg");
 
 imagem_cinza = cv2.cvtColor(imagem, cv2.COLOR_BGR2GRAY);
 
-ret,thresh = cv2.threshold(imagem_cinza, 190, 255, cv2.THRESH_BINARY);
+ret,thresh = cv2.threshold(imagem_cinza, 140, 255, cv2.THRESH_BINARY);
 
 cv2.imshow("binario", thresh);
 
