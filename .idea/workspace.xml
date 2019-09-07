@@ -2,22 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5d9d7ca-2aab-4240-b5f6-90423a8b1f5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eq.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fundo branco.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/A.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/I.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cascade.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/i.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/t.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TesseractOCRX.py" beforeDir="false" afterPath="$PROJECT_DIR$/TesseractOCRX.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e.png" beforeDir="false" afterPath="$PROJECT_DIR$/e.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fundo branco.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roi0.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roi1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roi10.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roi11.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roi12.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roi13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/roi14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/roi15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/roi16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/roi17.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roi2.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roi3.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roi4.png" beforeDir="false" />
@@ -26,23 +27,23 @@
       <change beforePath="$PROJECT_DIR$/imagens/roi7.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roi8.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roi9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saidas/1-ocr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saidas/10-ocr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saidas/11-ocr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saidas/12-ocr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saidas/13-ocr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saidas/14-ocr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saidas/15-ocr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saidas/16-ocr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saidas/17-ocr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saidas/2-ocr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saidas/3-ocr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saidas/4-ocr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saidas/5-ocr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saidas/6-ocr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saidas/7-ocr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saidas/8-ocr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saidas/9-ocr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quadParalel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ret.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida-ocr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/0-ocr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/1-ocr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/10-ocr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/11-ocr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/12-ocr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/13-ocr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/2-ocr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/3-ocr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/4-ocr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/5-ocr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/6-ocr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/7-ocr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/8-ocr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saidas/9-ocr.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/testwe.py" beforeDir="false" afterPath="$PROJECT_DIR$/testwe.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,6 +73,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/imagens" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -108,6 +110,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="haarcascade" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/haarcascade.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="testwe" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -132,6 +155,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.testwe" />
+        <item itemvalue="Python.haarcascade" />
         <item itemvalue="Python.TesseractOCRX" />
       </list>
     </recent_temporary>
