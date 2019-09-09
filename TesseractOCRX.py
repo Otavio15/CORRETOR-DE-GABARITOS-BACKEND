@@ -31,7 +31,7 @@ class TesseractOCR():
             # cv2.imshow("Escala Cinza", img)
 
             # Binariza imagem
-            ret, img = cv2.threshold(img, 185, 255, cv2.THRESH_BINARY)
+            ret, img = cv2.threshold(img, 155, 255, cv2.THRESH_BINARY)
             #cv2.imshow("Limiar", img)
 
             # Desfoque na Imagem

@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5d9d7ca-2aab-4240-b5f6-90423a8b1f5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/fundo_branco.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gabarito.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/A.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/I.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TesseractOCRX.py" beforeDir="false" afterPath="$PROJECT_DIR$/TesseractOCRX.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cascade.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cascade.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/e.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eq.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/i.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roix0.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roix1.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roix10.jpg" beforeDir="false" />
@@ -71,91 +59,70 @@
       <change beforePath="$PROJECT_DIR$/imagens/roix56.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roix57.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roix58.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/roix59.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roix6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/roix60.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/roix61.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/roix62.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/roix63.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/roix64.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/roix65.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/roix66.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roix7.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roix8.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roix9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ret.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/0-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/1-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/10-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/11-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/12-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/13-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/14-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/15-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/16-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/17-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/18-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/19-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/2-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/20-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/21-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/22-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/23-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/24-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/25-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/26-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/27-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/28-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/29-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/3-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/30-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/31-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/32-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/33-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/34-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/35-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/36-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/37-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/38-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/39-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/4-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/40-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/41-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/42-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/43-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/44-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/45-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/46-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/47-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/48-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/49-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/5-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/50-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/51-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/52-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/53-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/54-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/55-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/56-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/57-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/58-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/59-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/6-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/60-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/61-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/62-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/63-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/64-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/65-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/66-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/7-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/8-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saida/9-ocr4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/t.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/0-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/1-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/10-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/11-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/12-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/13-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/14-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/15-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/16-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/17-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/18-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/19-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/2-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/20-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/21-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/22-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/23-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/24-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/25-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/26-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/27-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/28-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/29-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/3-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/30-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/31-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/32-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/33-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/34-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/35-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/36-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/37-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/38-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/39-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/4-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/40-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/41-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/42-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/43-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/44-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/45-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/46-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/47-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/48-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/49-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/5-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/50-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/51-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/52-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/53-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/54-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/55-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/56-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/57-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/58-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/6-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/7-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/8-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/9-ocr17.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/testwe.py" beforeDir="false" afterPath="$PROJECT_DIR$/testwe.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/índice.jpeg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
