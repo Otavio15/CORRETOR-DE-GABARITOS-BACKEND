@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a5d9d7ca-2aab-4240-b5f6-90423a8b1f5d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imagem-binaria.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Imagem-binaria.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imagem-reconhecida.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Imagem-reconhecida.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TesseractOCRX.py" beforeDir="false" afterPath="$PROJECT_DIR$/TesseractOCRX.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roix0.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roix1.jpg" beforeDir="false" />
@@ -59,7 +61,16 @@
       <change beforePath="$PROJECT_DIR$/imagens/roix56.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roix57.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roix58.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roix59.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roix6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roix60.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roix61.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roix62.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roix63.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roix64.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roix65.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roix66.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/roix67.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roix7.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roix8.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/roix9.jpg" beforeDir="false" />
@@ -118,7 +129,16 @@
       <change beforePath="$PROJECT_DIR$/saida/56-ocr17.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/57-ocr17.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/58-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/59-ocr17.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/6-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/60-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/61-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/62-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/63-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/64-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/65-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/66-ocr17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/67-ocr17.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/7-ocr17.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/8-ocr17.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/9-ocr17.jpg" beforeDir="false" />

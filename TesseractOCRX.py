@@ -59,7 +59,7 @@ class TesseractOCR():
 
             for (x, y, a, l) in faces_detectadas:
                 # img_capturada retorna a região desenhada da face encontrada
-                cv2.rectangle(img, (x, y), (x + a, y + l), (0, 255, 0), 1)
+                cv2.rectangle(img, (x, y), (x + a, y + l), (0, 255, 0), 2)
 
 
             cv2.imwrite("saida/" + str(i) + "-ocr17.jpg", img)
