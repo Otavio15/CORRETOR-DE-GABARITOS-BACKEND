@@ -17,7 +17,9 @@ contours,h = cv2.findContours(thresh,cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
 
 contador = 0
 contador_pastas = 1
+
 aux_contador_pastas = False
+aux_aux_contador_pasta = False
 
 aux_x = -1
 aux_y = -1
@@ -25,7 +27,7 @@ flag_cor = False
 
 def criarPasta():
     global contador_pastas
-    os.mkdir('img/' + str(contador_pastas))
+    os.mkdir('imagens/' + str(contador_pastas))
     contador_pastas += 1
 
 for cnt in contours:
@@ -50,10 +52,11 @@ for cnt in contours:
             if (a > 15 and l > 15 and a < 300 and l < 300 and a-l < 15):
                 # cv2.rectangle é responsável por desenhar um retângulo na imagem
 
-                elementos = len(os.listdir("img"))
+                elementos = len(os.listdir("imagens"))
 
                 if (aux_x == -1 and aux_y == -1):
-                    cv2.rectangle(imagem, (x, y), (x + a, y + l), (0, 255, 0), 2)
+                    criarPasta()
+                    cv2.rectangle(imagem, (x, y), (x + a, y + l), (0, 0, 0), -1)
                 else:
                     if (y in range(aux_y-5, aux_y+5)):
                         if (flag_cor == False):
@@ -89,21 +92,25 @@ for cnt in contours:
 
                 aux_y = y
 
+                #altera os valores dentro do diretório
+                if aux_contador_pastas == aux_aux_contador_pasta:
+                    contador += 1
+                else:
+                    contador = 1
+                    aux_aux_contador_pasta = aux_contador_pastas
+                # ++++++++++++++++++++++++++++++++++++++
+
                 # variável roi captura a imagem "dentro" do retângulo
                 roi = imagem[y:y + l, x:x + a]
+
                 # cv2.imwrite grava a imagem em um arquivo de imagem no formato jpg
-                cv2.imwrite("img/"+str(contador_pastas-1)+"/roix"+str(contador)+".jpg", roi)
-                contador += 1
+                cv2.imwrite("imagens/" + str(contador_pastas - 1) + "/" + str(contador) + ".jpg", roi)
+
+                print(str(contador_pastas+1)+" ---- "+str(contador))
 
 cv2.imshow("imagens", imagem)
 cv2.imwrite("Imagem-reconhecida.jpg", imagem)
 cv2.waitKey(0);
 cv2.destroyAllWindows();
-
-elementos = len(os.listdir("img"))
-
-for i in range(1,len(os.listdir("img"))+1):
-    os.mkdir("imagens/"+str(i))
-
 
 import TesseractOCRX
