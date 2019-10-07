@@ -1,6 +1,6 @@
 
 import cv2
-import numpy as np
+import os
 
 imagem = cv2.imread("gabarito.png");
 
@@ -16,10 +16,17 @@ cv2.imshow("binario", thresh)
 contours,h = cv2.findContours(thresh,cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
 
 contador = 0
+contador_pastas = 1
+aux_contador_pastas = False
 
 aux_x = -1
 aux_y = -1
 flag_cor = False
+
+def criarPasta():
+    global contador_pastas
+    os.mkdir('img/' + str(contador_pastas))
+    contador_pastas += 1
 
 for cnt in contours:
 
@@ -43,19 +50,40 @@ for cnt in contours:
             if (a > 15 and l > 15 and a < 300 and l < 300 and a-l < 15):
                 # cv2.rectangle é responsável por desenhar um retângulo na imagem
 
+                elementos = len(os.listdir("img"))
+
                 if (aux_x == -1 and aux_y == -1):
                     cv2.rectangle(imagem, (x, y), (x + a, y + l), (0, 255, 0), 2)
                 else:
                     if (y in range(aux_y-5, aux_y+5)):
                         if (flag_cor == False):
+                            if aux_contador_pastas == False:
+                                criarPasta()
+                                aux_contador_pastas = True
+
                             cv2.rectangle(imagem, (x, y), (x + a, y + l), (0, 255, 0), 2)
+
                         else:
+                            if aux_contador_pastas == True:
+                                criarPasta()
+                                aux_contador_pastas = False
+
                             cv2.rectangle(imagem, (x, y), (x + a, y + l), (0, 0, 255), 2)
+
                     else:
                         if (flag_cor == False):
+                            if aux_contador_pastas == True:
+                                criarPasta()
+                                aux_contador_pastas = False
+
                             cv2.rectangle(imagem, (x, y), (x + a, y + l), (0, 0, 255), 2)
                             flag_cor = True
+
                         else:
+                            if aux_contador_pastas == False:
+                                criarPasta()
+                                aux_contador_pastas = True
+
                             cv2.rectangle(imagem, (x, y), (x + a, y + l), (0, 255, 0), 2)
                             flag_cor = False
 
@@ -64,11 +92,18 @@ for cnt in contours:
                 # variável roi captura a imagem "dentro" do retângulo
                 roi = imagem[y:y + l, x:x + a]
                 # cv2.imwrite grava a imagem em um arquivo de imagem no formato jpg
-                cv2.imwrite("imagens/roix"+str(contador)+".jpg", roi)
+                cv2.imwrite("img/"+str(contador_pastas-1)+"/roix"+str(contador)+".jpg", roi)
                 contador += 1
 
 cv2.imshow("imagens", imagem)
 cv2.imwrite("Imagem-reconhecida.jpg", imagem)
 cv2.waitKey(0);
 cv2.destroyAllWindows();
+
+elementos = len(os.listdir("img"))
+
+for i in range(1,len(os.listdir("img"))+1):
+    os.mkdir("imagens/"+str(i))
+
+
 import TesseractOCRX

@@ -1,7 +1,3 @@
-# --------------------------------------------#
-#  Aplicação de Reconhecimento de Caracteres  #
-#          Autor : Alexandre H                #
-# --------------------------------------------#
 
 from PIL import Image
 import pytesseract
@@ -66,8 +62,6 @@ class TesseractOCR():
 
 
             #############################
-
-
 
             '''
             imagem = Image.open("saidas/" + str(i) + "-ocr.jpg");
