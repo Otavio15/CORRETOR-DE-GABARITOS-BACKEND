@@ -2,6 +2,14 @@
 import cv2
 import os
 
+class Ordem:
+    def __init__(self, pasta, subpasta, valor):
+        self.pasta = pasta
+        self.subpasta = subpasta
+        self.valor = valor
+
+banco_de_dados = []
+
 imagem = cv2.imread("gabarito.png");
 
 imagem_cinza = cv2.cvtColor(imagem, cv2.COLOR_BGR2GRAY)
@@ -21,7 +29,6 @@ contador_pastas = 1
 aux_contador_pastas = False
 aux_aux_contador_pasta = False
 
-aux_x = -1
 aux_y = -1
 flag_cor = False
 
@@ -54,9 +61,9 @@ for cnt in contours:
 
                 elementos = len(os.listdir("imagens"))
 
-                if (aux_x == -1 and aux_y == -1):
+                if (aux_y == -1):
                     criarPasta()
-                    cv2.rectangle(imagem, (x, y), (x + a, y + l), (0, 0, 0), -1)
+                    cv2.rectangle(imagem, (x, y), (x + a, y + l), (255, 255, 255), -1)
                 else:
                     if (y in range(aux_y-5, aux_y+5)):
                         if (flag_cor == False):
@@ -92,6 +99,9 @@ for cnt in contours:
 
                 aux_y = y
 
+                # variável roi captura a imagem "dentro" do retângulo
+                roi = imagem[y:y + l, x:x + a]
+
                 #altera os valores dentro do diretório
                 if aux_contador_pastas == aux_aux_contador_pasta:
                     contador += 1
@@ -100,17 +110,15 @@ for cnt in contours:
                     aux_aux_contador_pasta = aux_contador_pastas
                 # ++++++++++++++++++++++++++++++++++++++
 
-                # variável roi captura a imagem "dentro" do retângulo
-                roi = imagem[y:y + l, x:x + a]
-
                 # cv2.imwrite grava a imagem em um arquivo de imagem no formato jpg
                 cv2.imwrite("imagens/" + str(contador_pastas - 1) + "/" + str(contador) + ".jpg", roi)
 
-                print(str(contador_pastas+1)+" ---- "+str(contador))
+                dados = Ordem(contador_pastas-1,contador,x)
+                banco_de_dados.append(dados)
 
 cv2.imshow("imagens", imagem)
 cv2.imwrite("Imagem-reconhecida.jpg", imagem)
 cv2.waitKey(0);
 cv2.destroyAllWindows();
 
-import TesseractOCRX
+#import TesseractOCRX
