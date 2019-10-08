@@ -4,6 +4,13 @@ import pytesseract
 import cv2
 import os
 
+respostas = {1 : "A", 2 : "B", 3 : "C", 4 : "D", 5 : "E", 6 : "D", 7 : "C", 8 : "B", 9 : "A", 10 : "A"}
+
+def verificar_resposta(self, questao):
+    elementos = len(os.listdir("imagens/" + str(questao)))
+    for i in range(elementos):
+        pass
+
 class TesseractOCR():
 
     def __init__(self):
@@ -25,7 +32,7 @@ class TesseractOCR():
         # cv2.imshow("Escala Cinza", img)
 
         # Binariza imagem
-        ret, img = cv2.threshold(img, 155, 255, cv2.THRESH_BINARY)
+        ret, img = cv2.threshold(img, 140, 255, cv2.THRESH_BINARY)
         #cv2.imshow("Limiar", img)
 
         # Desfoque na Imagem
@@ -71,10 +78,3 @@ for i in range(a1, 0, -1):
     a2 = len(os.listdir("imagens/"+str(i)))
     for j in range(1, a2+1):
         TesseractOCR().leituraImg("imagens/" + str(i) + "/" + str(j), i , j)
-
-
-
-
-
-
-

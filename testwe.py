@@ -3,14 +3,15 @@ import cv2
 import os
 
 class Ordem:
-    def __init__(self, pasta, subpasta, valor):
+    def __init__(self, pasta, subpasta, valorx, imagem):
         self.pasta = pasta
         self.subpasta = subpasta
-        self.valor = valor
+        self.valorx = valorx
+        self.imagem = imagem
 
-banco_de_dados = []
+conjunto_elementos = []
 
-imagem = cv2.imread("gabarito.png");
+imagem = cv2.imread("gabarito.png")
 
 imagem_cinza = cv2.cvtColor(imagem, cv2.COLOR_BGR2GRAY)
 cv2.imwrite("Imagem-cinza.jpg", imagem_cinza)
@@ -31,6 +32,8 @@ aux_aux_contador_pasta = False
 
 aux_y = -1
 flag_cor = False
+
+dados = 0
 
 def criarPasta():
     global contador_pastas
@@ -110,15 +113,20 @@ for cnt in contours:
                     aux_aux_contador_pasta = aux_contador_pastas
                 # ++++++++++++++++++++++++++++++++++++++
 
-                # cv2.imwrite grava a imagem em um arquivo de imagem no formato jpg
-                cv2.imwrite("imagens/" + str(contador_pastas - 1) + "/" + str(contador) + ".jpg", roi)
+                dados = Ordem(contador_pastas - 1, contador, x, roi)
+                conjunto_elementos.append(dados)
 
-                dados = Ordem(contador_pastas-1,contador,x)
-                banco_de_dados.append(dados)
 
 cv2.imshow("imagens", imagem)
 cv2.imwrite("Imagem-reconhecida.jpg", imagem)
-cv2.waitKey(0);
-cv2.destroyAllWindows();
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
-#import TesseractOCRX
+conjunto_elementos.sort(key=lambda x: x.valorx)
+conjunto_elementos.sort(key=lambda x: x.pasta)
+
+for i in conjunto_elementos:
+    cv2.imwrite("imagens/" + str(i.pasta) + "/" + str(i.subpasta) + ".jpg", i.imagem)
+
+print(len(conjunto_elementos))
+import TesseractOCRX
