@@ -4,12 +4,8 @@ import pytesseract
 import cv2
 import os
 
-respostas = {1 : "A", 2 : "B", 3 : "C", 4 : "D", 5 : "E", 6 : "D", 7 : "C", 8 : "B", 9 : "A", 10 : "A"}
-
-def verificar_resposta(self, questao):
-    elementos = len(os.listdir("imagens/" + str(questao)))
-    for i in range(elementos):
-        pass
+gabarito = {1 : "A", 2 : "B", 3 : "C", 4 : "D", 5 : "E", 6 : "D", 7 : "C", 8 : "B", 9 : "A", 10 : "A"}
+respostas = {}
 
 class TesseractOCR():
 

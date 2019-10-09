@@ -125,8 +125,20 @@ cv2.destroyAllWindows()
 conjunto_elementos.sort(key=lambda x: x.valorx)
 conjunto_elementos.sort(key=lambda x: x.pasta)
 
-for i in conjunto_elementos:
-    cv2.imwrite("imagens/" + str(i.pasta) + "/" + str(i.subpasta) + ".jpg", i.imagem)
+aux = 1
+contador = 0
 
-print(len(conjunto_elementos))
+for i in range(len(conjunto_elementos)):
+
+    if (aux == conjunto_elementos[i].pasta):
+        contador += 1
+    else:
+        aux = conjunto_elementos[i].pasta
+        contador = 1
+
+    cv2.imwrite("imagens/" + str(conjunto_elementos[i].pasta) + "/" + str(contador) + ".jpg", conjunto_elementos[i].imagem)
+    print("pasta {}, subpasta {}".format(conjunto_elementos[i].pasta,contador))
+
+    #print("aux {}, contador {}".format(aux,contador))
+
 import TesseractOCRX
