@@ -11,7 +11,7 @@ class Ordem:
 
 conjunto_elementos = []
 
-imagem = cv2.imread("iii.png")
+imagem = cv2.imread("gabarito.png")
 
 imagem_cinza = cv2.cvtColor(imagem, cv2.COLOR_BGR2GRAY)
 cv2.imwrite("Imagem-cinza.jpg", imagem_cinza)
@@ -19,8 +19,6 @@ cv2.imwrite("Imagem-cinza.jpg", imagem_cinza)
 ret,thresh = cv2.threshold(imagem_cinza, 175, 255, cv2.THRESH_BINARY)
 
 cv2.imwrite("Imagem-binaria.jpg", thresh)
-
-cv2.imshow("binario", thresh)
 
 contours,h = cv2.findContours(thresh,cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
 
@@ -66,7 +64,8 @@ for cnt in contours:
 
                 if (aux_y == -1):
                     criarPasta()
-                    cv2.rectangle(imagem, (x, y), (x + a, y + l), (255, 255, 255), -1)
+                    cv2.rectangle(thresh, (x, y), (x + a, y + l), (255, 255, 255), 2)
+                    cv2.rectangle(imagem, (x, y), (x + a, y + l), (0, 0, 255), 2)
                 else:
                     if (y in range(aux_y-5, aux_y+5)):
                         if (flag_cor == False):
@@ -74,6 +73,7 @@ for cnt in contours:
                                 criarPasta()
                                 aux_contador_pastas = True
 
+                            cv2.rectangle(thresh, (x, y), (x + a, y + l), (255, 255, 255), 2)
                             cv2.rectangle(imagem, (x, y), (x + a, y + l), (0, 255, 0), 2)
 
                         else:
@@ -81,6 +81,7 @@ for cnt in contours:
                                 criarPasta()
                                 aux_contador_pastas = False
 
+                            cv2.rectangle(thresh, (x, y), (x + a, y + l), (255, 255, 255), 2)
                             cv2.rectangle(imagem, (x, y), (x + a, y + l), (0, 0, 255), 2)
 
                     else:
@@ -89,6 +90,7 @@ for cnt in contours:
                                 criarPasta()
                                 aux_contador_pastas = False
 
+                            cv2.rectangle(thresh, (x, y), (x + a, y + l), (255, 255, 255), 2)
                             cv2.rectangle(imagem, (x, y), (x + a, y + l), (0, 0, 255), 2)
                             flag_cor = True
 
@@ -97,13 +99,14 @@ for cnt in contours:
                                 criarPasta()
                                 aux_contador_pastas = True
 
+                            cv2.rectangle(thresh, (x, y), (x + a, y + l), (255, 255, 255), 2)
                             cv2.rectangle(imagem, (x, y), (x + a, y + l), (0, 255, 0), 2)
                             flag_cor = False
 
                 aux_y = y
 
                 # variável roi captura a imagem "dentro" do retângulo
-                roi = imagem[y:y + l, x:x + a]
+                roi = thresh[y:y + l, x:x + a]
 
                 #altera os valores dentro do diretório
                 if aux_contador_pastas == aux_aux_contador_pasta:
@@ -118,6 +121,7 @@ for cnt in contours:
 
 
 cv2.imshow("imagens", imagem)
+cv2.imshow("imagem binaria", thresh)
 cv2.imwrite("Imagem-reconhecida.jpg", imagem)
 cv2.waitKey(0)
 cv2.destroyAllWindows()

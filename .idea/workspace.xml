@@ -7,6 +7,8 @@
       <change beforePath="$PROJECT_DIR$/Imagem-cinza.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Imagem-cinza.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Imagem-reconhecida.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Imagem-reconhecida.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TesseractOCRX.py" beforeDir="false" afterPath="$PROJECT_DIR$/TesseractOCRX.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cascade.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cascade.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iii.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/testwe.py" beforeDir="false" afterPath="$PROJECT_DIR$/testwe.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -139,8 +141,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.testwe" />
-        <item itemvalue="Python.teste" />
         <item itemvalue="Python.TesseractOCRX" />
+        <item itemvalue="Python.teste" />
         <item itemvalue="Python.haarcascade" />
       </list>
     </recent_temporary>
