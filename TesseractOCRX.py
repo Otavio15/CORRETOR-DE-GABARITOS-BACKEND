@@ -15,11 +15,7 @@ class TesseractOCR():
 
     def leituraImg(self, path_img, i, j):
 
-        flagA = False
-        flagB = False
-        flagC = False
-        flagD = False
-        flagE = False
+        flag = False
 
         quant = len(os.listdir("imagens"));
         classificador = cv2.CascadeClassifier("cascade.xml")
@@ -47,30 +43,29 @@ class TesseractOCR():
         for (x, y, a, l) in faces_detectadas:
             # img_capturada retorna a região desenhada da face encontrada
 
-            if (j != 1):
+            if (j != 1 and i != 0):
                 global respostas
-                if (j == 2 and flagA == False):
+                if (j == 2 and flag == False):
                     respostas += "A"
-                    flagA = True
+                    flag = True
                     cv2.rectangle(img, (x, y), (x + a, y + l), (0, 255, 0), 2)
-                elif (j == 3 and flagB == False):
+                elif (j == 3 and flag == False):
                     respostas += "B"
-                    flagB = True
+                    flag = True
                     cv2.rectangle(img, (x, y), (x + a, y + l), (0, 255, 0), 2)
-                elif (j == 4 and flagC == False):
+                elif (j == 4 and flag == False):
                     respostas += "C"
-                    flagC = True
+                    flag = True
                     cv2.rectangle(img, (x, y), (x + a, y + l), (0, 255, 0), 2)
-                elif (j == 5 and flagD == False):
+                elif (j == 5 and flag == False):
                     respostas += "D"
-                    flagD = True
+                    flag = True
                     cv2.rectangle(img, (x, y), (x + a, y + l), (0, 255, 0), 2)
-                elif (j == 6 and flagE == False):
+                elif (j == 6 and flag == False):
                     respostas += "E"
-                    flagE = True
+                    flag = True
                     cv2.rectangle(img, (x, y), (x + a, y + l), (0, 255, 0), 2)
 
-        #cv2.imwrite("saida/" + str(i) + "-ocr17.jpg", img)
         cv2.imwrite("saida/{}/{}.jpg".format(i,j), img)
 
         cv2.destroyAllWindows()
@@ -78,13 +73,13 @@ class TesseractOCR():
 
 a1 = len(os.listdir("imagens"))
 
-for i in range(1,a1+1):
+for i in range(a1):
     os.mkdir("saida/"+str(i))
+    print(" i  == "+str(i)) #0 a 12
 
-for i in range(a1, 0, -1):
-    a2 = len(os.listdir("imagens/"+str(i)))
-    for j in range(1, a2+1):
-        TesseractOCR().leituraImg("imagens/" + str(i) + "/" + str(j), i , j)
-        print("{} -- {}".format(i,j))
+for i in range(a1):
+    for j in range(1, len(os.listdir("imagens/{}".format(i))) + 1):
+        TesseractOCR().leituraImg("imagens/" + str(i) + "/" + str(j), i, j)
+        print("i = {}, j = {}".format(i,j))
 
 print("Gabarito = {}, resposta do aluno {}".format(gabarito,respostas))

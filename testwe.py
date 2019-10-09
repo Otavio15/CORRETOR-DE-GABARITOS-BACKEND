@@ -24,7 +24,7 @@ cv2.imwrite("Imagem-binaria.jpg", thresh)
 contours,h = cv2.findContours(thresh,cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
 
 contador = 0
-contador_pastas = 1
+contador_pastas = 0
 
 aux_contador_pastas = False
 aux_aux_contador_pasta = False
@@ -131,6 +131,7 @@ conjunto_elementos.sort(key=lambda x: x.pasta)
 
 aux = 1
 contador = 0
+tamanho = len(os.listdir("imagens"))
 
 for i in range(len(conjunto_elementos)):
 
@@ -140,9 +141,8 @@ for i in range(len(conjunto_elementos)):
         aux = conjunto_elementos[i].pasta
         contador = 1
 
-    cv2.imwrite("imagens/" + str(conjunto_elementos[i].pasta) + "/" + str(contador) + ".jpg", conjunto_elementos[i].imagem)
-    print("pasta {}, subpasta {}".format(conjunto_elementos[i].pasta,contador))
-
-    #print("aux {}, contador {}".format(aux,contador))
+    x = conjunto_elementos[i].pasta
+    valor = tamanho-x-1
+    cv2.imwrite("imagens/" + str(valor) + "/" + str(contador) + ".jpg", conjunto_elementos[i].imagem)
 
 import TesseractOCRX
