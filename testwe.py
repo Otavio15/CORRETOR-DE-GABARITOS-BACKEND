@@ -11,7 +11,7 @@ class Ordem:
 
 conjunto_elementos = []
 
-imagem = cv2.imread("gabarito.png")
+imagem = cv2.imread("iii.png")
 
 imagem_cinza = cv2.cvtColor(imagem, cv2.COLOR_BGR2GRAY)
 cv2.imwrite("Imagem-cinza.jpg", imagem_cinza)

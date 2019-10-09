@@ -4,8 +4,9 @@ import pytesseract
 import cv2
 import os
 
-gabarito = {1 : "A", 2 : "B", 3 : "C", 4 : "D", 5 : "E", 6 : "D", 7 : "C", 8 : "B", 9 : "A", 10 : "A"}
-respostas = {}
+gabarito = "A,B,C,D,E,D,C,B,A,A"
+
+respostas = ""
 
 class TesseractOCR():
 
@@ -57,7 +58,17 @@ class TesseractOCR():
         for (x, y, a, l) in faces_detectadas:
             # img_capturada retorna a região desenhada da face encontrada
             cv2.rectangle(img, (x, y), (x + a, y + l), (0, 255, 0), 2)
-
+            global respostas
+            if (j == 1):
+                respostas += "A"
+            elif (j == 2):
+                respostas += "B"
+            elif (j == 3):
+                respostas += "C"
+            elif (j == 4):
+                respostas += "D"
+            elif (j == 5):
+                respostas += "E"
 
         #cv2.imwrite("saida/" + str(i) + "-ocr17.jpg", img)
         cv2.imwrite("saida/{}/{}.jpg".format(i,j), img)
@@ -74,3 +85,5 @@ for i in range(a1, 0, -1):
     a2 = len(os.listdir("imagens/"+str(i)))
     for j in range(1, a2+1):
         TesseractOCR().leituraImg("imagens/" + str(i) + "/" + str(j), i , j)
+
+print("Gabarito = {}, resposta do aluno {}".format(gabarito,respostas))
