@@ -11,13 +11,15 @@ class Ordem:
 
 conjunto_elementos = []
 
-imagem = cv2.imread("gabarito.png")
-imagem_aux = cv2.imread("gabarito.png")
+arquivo = "iii.png"
+
+imagem = cv2.imread(arquivo)
+imagem_aux = cv2.imread(arquivo)
 
 imagem_cinza = cv2.cvtColor(imagem, cv2.COLOR_BGR2GRAY)
 cv2.imwrite("Imagem-cinza.jpg", imagem_cinza)
 
-ret,thresh = cv2.threshold(imagem_cinza, 175, 255, cv2.THRESH_BINARY)
+ret,thresh = cv2.threshold(imagem_cinza, 185, 255, cv2.THRESH_BINARY)
 
 cv2.imwrite("Imagem-binaria.jpg", thresh)
 

@@ -4,9 +4,9 @@ import pytesseract
 import cv2
 import os
 
-gabarito = "A,B,C,D,E,D,C,B,A,A"
+gabarito = {1:"A", 2:"B", 3:"C", 4:"D", 5:"E", 6:"D", 7:"C", 8:"B", 9:"A", 10:"A", 11:"C", 12:"D"}
 
-respostas = ""
+respostas = {}
 
 class TesseractOCR():
 
@@ -46,25 +46,26 @@ class TesseractOCR():
             if (j != 1 and i != 0):
                 global respostas
                 if (j == 2 and flag == False):
-                    respostas += "A"
+                    respostas[i] = "A"
                     flag = True
                     cv2.rectangle(img, (x, y), (x + a, y + l), (0, 255, 0), 2)
                 elif (j == 3 and flag == False):
-                    respostas += "B"
+                    respostas[i] = "B"
                     flag = True
                     cv2.rectangle(img, (x, y), (x + a, y + l), (0, 255, 0), 2)
                 elif (j == 4 and flag == False):
-                    respostas += "C"
+                    respostas[i] = "C"
                     flag = True
                     cv2.rectangle(img, (x, y), (x + a, y + l), (0, 255, 0), 2)
                 elif (j == 5 and flag == False):
-                    respostas += "D"
+                    respostas[i] = "D"
                     flag = True
                     cv2.rectangle(img, (x, y), (x + a, y + l), (0, 255, 0), 2)
                 elif (j == 6 and flag == False):
-                    respostas += "E"
+                    respostas[i] = "E"
                     flag = True
                     cv2.rectangle(img, (x, y), (x + a, y + l), (0, 255, 0), 2)
+
 
         cv2.imwrite("saida/{}/{}.jpg".format(i,j), img)
 
@@ -74,12 +75,16 @@ class TesseractOCR():
 a1 = len(os.listdir("imagens"))
 
 for i in range(a1):
-    os.mkdir("saida/"+str(i))
-    print(" i  == "+str(i)) #0 a 12
+    if (len(os.listdir("imagens/"+str(i))) > 2):
+        os.mkdir("saida/"+str(i))
+    else:
+        a1 -= 1
+    print(" i  == "+str(i))
 
 for i in range(a1):
     for j in range(1, len(os.listdir("imagens/{}".format(i))) + 1):
         TesseractOCR().leituraImg("imagens/" + str(i) + "/" + str(j), i, j)
         print("i = {}, j = {}".format(i,j))
 
-print("Gabarito = {}, resposta do aluno {}".format(gabarito,respostas))
+print("\n Gabarito = {}, \n resposta do aluno = {}".format(gabarito,respostas))
+
