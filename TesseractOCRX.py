@@ -4,9 +4,11 @@ import pytesseract
 import cv2
 import os
 
-gabarito = {1:"A", 2:"B", 3:"C", 4:"D", 5:"E", 6:"D", 7:"C", 8:"B", 9:"A", 10:"A", 11:"C", 12:"D"}
+gabarito = {1:"A", 2:"B", 3:"C", 4:"B", 5:"E", 6:"D", 7:"C", 8:"B", 9:"A", 10:"C", 11:"B", 12:"C"}
 
 respostas = {}
+
+flag_resposta = False
 
 class TesseractOCR():
 
@@ -44,26 +46,31 @@ class TesseractOCR():
             # img_capturada retorna a região desenhada da face encontrada
 
             if (j != 1 and i != 0):
-                global respostas
+                global respostas, flag_resposta
                 if (j == 2 and flag == False):
                     respostas[i] = "A"
                     flag = True
+                    flag_resposta = True
                     cv2.rectangle(img, (x, y), (x + a, y + l), (0, 255, 0), 2)
                 elif (j == 3 and flag == False):
                     respostas[i] = "B"
                     flag = True
+                    flag_resposta = True
                     cv2.rectangle(img, (x, y), (x + a, y + l), (0, 255, 0), 2)
                 elif (j == 4 and flag == False):
                     respostas[i] = "C"
                     flag = True
+                    flag_resposta = True
                     cv2.rectangle(img, (x, y), (x + a, y + l), (0, 255, 0), 2)
                 elif (j == 5 and flag == False):
                     respostas[i] = "D"
                     flag = True
+                    flag_resposta = True
                     cv2.rectangle(img, (x, y), (x + a, y + l), (0, 255, 0), 2)
                 elif (j == 6 and flag == False):
                     respostas[i] = "E"
                     flag = True
+                    flag_resposta = True
                     cv2.rectangle(img, (x, y), (x + a, y + l), (0, 255, 0), 2)
 
 
@@ -86,5 +93,24 @@ for i in range(a1):
         TesseractOCR().leituraImg("imagens/" + str(i) + "/" + str(j), i, j)
         print("i = {}, j = {}".format(i,j))
 
-print("\n Gabarito = {}, \n resposta do aluno = {}".format(gabarito,respostas))
+    if (flag_resposta == False and i != 0):
+        respostas[i] = "Z"
+    else:
+        flag_resposta = False
 
+tamanho_gabarito = len(gabarito)
+tamanho_resposta = len(respostas)
+
+if (tamanho_gabarito > tamanho_resposta):
+    for i in range(tamanho_resposta, tamanho_gabarito+1):
+        respostas[i] = "Z"
+
+print("\n Gabarito = {}, \n respostas = {}".format(gabarito,respostas))
+
+acertos = 0
+
+for k, v in gabarito.items():
+    if (v == respostas[k]):
+        acertos += 1
+
+print("\n O aluno(a) acertou {} questões de {}. Totalizando {}% de acertos".format(acertos,tamanho_gabarito, round(acertos*100/tamanho_gabarito, 2)))
