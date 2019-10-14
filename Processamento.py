@@ -1,8 +1,15 @@
 
-from PIL import Image
-import pytesseract
 import cv2
 import os
+import shutil
+import json
+
+tamanho = len(os.listdir("saida"))
+
+if (tamanho > 0):
+    for i in range(tamanho):
+        shutil.rmtree('saida/' + str(i))
+
 
 gabarito = {1:"A", 2:"B", 3:"C", 4:"B", 5:"E", 6:"D", 7:"C", 8:"B", 9:"A", 10:"C", 11:"B", 12:"C"}
 
@@ -10,7 +17,7 @@ respostas = {}
 
 flag_resposta = False
 
-class TesseractOCR():
+class Processamento():
 
     def __init__(self):
         pass
@@ -33,7 +40,7 @@ class TesseractOCR():
         # cv2.imshow("Escala Cinza", img)
 
         # Binariza imagem
-        ret, img = cv2.threshold(img, 140, 255, cv2.THRESH_BINARY)
+        ret, img = cv2.threshold(img, 135, 255, cv2.THRESH_BINARY)
         #cv2.imshow("Limiar", img)
 
         # Desfoque na Imagem
@@ -86,12 +93,10 @@ for i in range(a1):
         os.mkdir("saida/"+str(i))
     else:
         a1 -= 1
-    print(" i  == "+str(i))
 
 for i in range(a1):
     for j in range(1, len(os.listdir("imagens/{}".format(i))) + 1):
-        TesseractOCR().leituraImg("imagens/" + str(i) + "/" + str(j), i, j)
-        print("i = {}, j = {}".format(i,j))
+        Processamento().leituraImg("imagens/" + str(i) + "/" + str(j), i, j)
 
     if (flag_resposta == False and i != 0):
         respostas[i] = "Z"
@@ -103,9 +108,9 @@ tamanho_resposta = len(respostas)
 
 if (tamanho_gabarito > tamanho_resposta):
     for i in range(tamanho_resposta, tamanho_gabarito+1):
-        respostas[i] = "Z"
+        respostas[i] = "Y"
 
-print("\n Gabarito = {}, \n respostas = {}".format(gabarito,respostas))
+print("\n Gabarito  = {}, \n respostas = {}".format(gabarito,respostas))
 
 acertos = 0
 
@@ -114,3 +119,13 @@ for k, v in gabarito.items():
         acertos += 1
 
 print("\n O aluno(a) acertou {} questões de {}. Totalizando {}% de acertos".format(acertos,tamanho_gabarito, round(acertos*100/tamanho_gabarito, 2)))
+
+respostas = json.dumps(respostas, indent=4, sort_keys=False)
+
+try:
+    arquivo_json = open("dados.json", "w")
+    arquivo_json.write(respostas)
+    arquivo_json.close()
+except:
+    print("Ocorreu um erro na hora de montar o arquivo JSON.")
+

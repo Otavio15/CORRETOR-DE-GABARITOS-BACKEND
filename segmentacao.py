@@ -1,6 +1,13 @@
 
 import cv2
 import os
+import shutil
+
+tamanho = len(os.listdir("imagens"))
+
+if (tamanho > 0):
+    for i in range(tamanho):
+        shutil.rmtree('imagens/' + str(i))
 
 class Ordem:
     def __init__(self, pasta, subpasta, valorx, imagem):
@@ -122,11 +129,7 @@ for cnt in contours:
                 dados = Ordem(contador_pastas - 1, contador, x, roi)
                 conjunto_elementos.append(dados)
 
-cv2.imshow("imagens", imagem)
-cv2.imshow("imagem 2", imagem_aux)
 cv2.imwrite("Imagem-reconhecida.jpg", imagem)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
 
 conjunto_elementos.sort(key=lambda x: x.valorx)
 conjunto_elementos.sort(key=lambda x: x.pasta)
@@ -147,4 +150,4 @@ for i in range(len(conjunto_elementos)):
     valor = tamanho-x-1
     cv2.imwrite("imagens/" + str(valor) + "/" + str(contador) + ".jpg", conjunto_elementos[i].imagem)
 
-import TesseractOCRX
+import Processamento
