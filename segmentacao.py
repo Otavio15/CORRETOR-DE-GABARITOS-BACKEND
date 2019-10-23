@@ -150,4 +150,4 @@ for i in range(len(conjunto_elementos)):
     valor = tamanho-x-1
     cv2.imwrite("imagens/" + str(valor) + "/" + str(contador) + ".jpg", conjunto_elementos[i].imagem)
 
-import Processamento
+import processamento
