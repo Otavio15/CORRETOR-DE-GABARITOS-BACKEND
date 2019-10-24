@@ -18,7 +18,7 @@ if (tamanho > 0):
 
 conjunto_elementos = []
 
-arquivo = "iii.png"
+arquivo = "gabarito.png"
 
 imagem = cv2.imread(arquivo)
 imagem_aux = cv2.imread(arquivo)

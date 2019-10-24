@@ -3,11 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a5d9d7ca-2aab-4240-b5f6-90423a8b1f5d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UPLOAD_FOLDER/1.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dados.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/iii.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/processamento.py" beforeDir="false" afterPath="$PROJECT_DIR$/processamento.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/6/5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/saida/6/5.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/segmentacao.py" beforeDir="false" afterPath="$PROJECT_DIR$/segmentacao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -162,8 +164,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.api" />
-        <item itemvalue="Python.testwe" />
         <item itemvalue="Python.TesseractOCRX" />
+        <item itemvalue="Python.testwe" />
         <item itemvalue="Python.teste" />
         <item itemvalue="Python.haarcascade" />
       </list>

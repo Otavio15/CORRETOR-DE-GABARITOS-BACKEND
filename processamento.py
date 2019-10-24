@@ -110,24 +110,8 @@ if (tamanho_gabarito > tamanho_resposta):
     for i in range(tamanho_resposta, tamanho_gabarito+1):
         respostas[i] = "Y"
 
-'''
-print("\n Gabarito  = {}, \n respostas = {}".format(gabarito,respostas))
-
-acertos = 0
-
-for k, v in gabarito.items():
-    if (v == respostas[k]):
-        acertos += 1
-
-print("\n O aluno(a) acertou {} questões de {}. Totalizando {}% de acertos".format(acertos,tamanho_gabarito, round(acertos*100/tamanho_gabarito, 2)))
-
-respostas = json.dumps(respostas, indent=4, sort_keys=False)
-'''
-
 try:
-    arquivo_json = open("dados.json", "w")
-    arquivo_json.write(respostas)
-    arquivo_json.close()
+    with open('dados.json', 'w') as fp:
+        json.dump(respostas, fp)
 except:
     print("Ocorreu um erro na hora de montar o arquivo JSON.")
-

@@ -1,5 +1,4 @@
 import os
-
 from flask import Flask, request
 import json
 
@@ -19,7 +18,6 @@ def upload_file():
 			image = request.files["image"]
 			image.save(os.path.join(app.config["IMAGE_UPLOADS"], image.filename))
 			import segmentacao
-			print("Image saved")
 			return json.load(open("dados.json"))
 
 if __name__ == "__main__":
