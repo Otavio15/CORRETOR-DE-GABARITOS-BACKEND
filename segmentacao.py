@@ -3,18 +3,18 @@ import cv2
 import os
 import shutil
 
-tamanho = len(os.listdir("imagens"))
-
-if (tamanho > 0):
-    for i in range(tamanho):
-        shutil.rmtree('imagens/' + str(i))
-
 class Ordem:
     def __init__(self, pasta, subpasta, valorx, imagem):
         self.pasta = pasta
         self.subpasta = subpasta
         self.valorx = valorx
         self.imagem = imagem
+
+tamanho = len(os.listdir("imagens"))
+
+if (tamanho > 0):
+    for i in range(tamanho):
+        shutil.rmtree('imagens/' + str(i))
 
 conjunto_elementos = []
 

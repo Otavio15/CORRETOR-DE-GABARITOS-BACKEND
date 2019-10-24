@@ -5,6 +5,8 @@ import json
 
 app = Flask(__name__)
 
+app.config["IMAGE_UPLOADS"] = "/home/otavio/PycharmProjects/untitled"
+
 @app.route("/resultado", methods=['GET','POST'])
 def index():
     return json.load(open("dados.json"))
@@ -14,8 +16,10 @@ def upload_file():
 	if request.method == 'POST':
         # check if the post request has the file part
 		if request.files:
-
-			print("OK")
+			image = request.files["image"]
+			image.save(os.path.join(app.config["IMAGE_UPLOADS"], image.filename))
+			import segmentacao
+			print("Image saved")
 			return json.load(open("dados.json"))
 
 if __name__ == "__main__":
