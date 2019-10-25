@@ -3,6 +3,8 @@ import cv2
 import os
 import shutil
 
+os.remove("dados.json")
+
 class Ordem:
     def __init__(self, pasta, subpasta, valorx, imagem):
         self.pasta = pasta
