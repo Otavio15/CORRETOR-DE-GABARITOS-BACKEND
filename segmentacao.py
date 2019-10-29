@@ -3,8 +3,6 @@ import cv2
 import os
 import shutil
 
-os.remove("dados.json")
-
 class Ordem:
     def __init__(self, pasta, subpasta, valorx, imagem):
         self.pasta = pasta
@@ -23,12 +21,23 @@ conjunto_elementos = []
 arquivo = "gabarito.png"
 
 imagem = cv2.imread(arquivo)
+
 imagem_aux = cv2.imread(arquivo)
+
+#####################
+'''
+height = 1024
+width = 620
+
+imagem = cv2.resize(imagem, (width, height), interpolation = cv2.INTER_CUBIC)
+imagem_aux = cv2.resize(imagem_aux, (width, height), interpolation = cv2.INTER_CUBIC)
+'''
+#####################
 
 imagem_cinza = cv2.cvtColor(imagem, cv2.COLOR_BGR2GRAY)
 cv2.imwrite("Imagem-cinza.jpg", imagem_cinza)
 
-ret,thresh = cv2.threshold(imagem_cinza, 185, 255, cv2.THRESH_BINARY)
+ret,thresh = cv2.threshold(imagem_cinza, 190, 255, cv2.THRESH_BINARY)
 
 cv2.imwrite("Imagem-binaria.jpg", thresh)
 
@@ -65,6 +74,7 @@ for cnt in contours:
         if len(approx) == 4:
             # boundingRect captura as coordenadas x,y e a altura e largura
             (x, y, a, l) = cv2.boundingRect(cnt)
+
             # A condição seguinte testa as seguintes propiedades:
             # A altura e largura é maior que 15px e altura e largura é menor que 300px;
             # O resultado da altura - largura é menor que 15, essa condicional serve...
