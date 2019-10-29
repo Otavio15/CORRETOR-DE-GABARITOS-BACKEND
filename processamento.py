@@ -32,7 +32,7 @@ class Processamento():
         img = cv2.imread(path_img+".jpg")
 
         # amplia a imagem da placa em 4
-        img = cv2.resize(img, None, fx=6, fy=6, interpolation=cv2.INTER_CUBIC);
+        img = cv2.resize(img, None, fx=4, fy=4, interpolation=cv2.INTER_CUBIC);
         #cv2.imshow("ENTRADA", img)
 
         # Converte para escala de cinza
@@ -40,14 +40,14 @@ class Processamento():
         # cv2.imshow("Escala Cinza", img)
 
         # Binariza imagem
-        ret, img = cv2.threshold(img, 145, 255, cv2.THRESH_BINARY)
+        img = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 91, 40)
         #cv2.imshow("Limiar", img)
 
         # Desfoque na Imagem
         img = cv2.GaussianBlur(img, (5, 5), 0)
         # cv2.imshow("Desfoque", img)
 
-        faces_detectadas = classificador.detectMultiScale(img, scaleFactor=1.04)
+        faces_detectadas = classificador.detectMultiScale(img, scaleFactor=1.05)
 
         for (x, y, a, l) in faces_detectadas:
             # img_capturada retorna a região desenhada da face encontrada

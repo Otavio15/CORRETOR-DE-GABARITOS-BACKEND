@@ -43,9 +43,9 @@ imagem_aux = cv2.resize(imagem_aux, (width, height), interpolation = cv2.INTER_C
 imagem_cinza = cv2.cvtColor(imagem, cv2.COLOR_BGR2GRAY)
 cv2.imwrite("Imagem-cinza.jpg", imagem_cinza)
 
-thresh = cv2.adaptiveThreshold(imagem_cinza, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 91, 12)
+thresh = cv2.adaptiveThreshold(imagem_cinza, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 91, 20)
 
-#thresh = cv2.medianBlur(thresh,5)
+thresh = cv2.medianBlur(thresh,5)
 
 cv2.imwrite("Imagem-binaria.jpg", thresh)
 
