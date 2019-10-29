@@ -11,7 +11,7 @@ if (tamanho > 0):
         shutil.rmtree('saida/' + str(i))
 
 
-gabarito = {1:"D", 2:"C", 3:"C", 4:"B", 5:"E", 6:"D", 7:"C", 8:"B", 9:"A", 10:"C", 11:"B", 12:"C"}
+gabarito = {1:"Y", 2:"Y", 3:"Y", 4:"Y", 5:"Y", 6:"Y", 7:"Y", 8:"Y", 9:"Y", 10:"Y", 11:"Y", 12:"Y", 13:"Y", 14:"Y", 15:"Y"}
 
 respostas = {}
 
@@ -40,7 +40,7 @@ class Processamento():
         # cv2.imshow("Escala Cinza", img)
 
         # Binariza imagem
-        ret, img = cv2.threshold(img, 135, 255, cv2.THRESH_BINARY)
+        ret, img = cv2.threshold(img, 145, 255, cv2.THRESH_BINARY)
         #cv2.imshow("Limiar", img)
 
         # Desfoque na Imagem

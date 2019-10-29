@@ -25,19 +25,27 @@ imagem = cv2.imread(arquivo)
 imagem_aux = cv2.imread(arquivo)
 
 #####################
-'''
-height = 1024
-width = 620
+
+height = imagem.shape[0]
+width = imagem.shape[1]
+
+if (height > width):
+    while (width > 600):
+        height -= int(height/5)
+        width -= int(width/5)
+        #print("Altura {}, largura {}".format(height,width))
 
 imagem = cv2.resize(imagem, (width, height), interpolation = cv2.INTER_CUBIC)
 imagem_aux = cv2.resize(imagem_aux, (width, height), interpolation = cv2.INTER_CUBIC)
-'''
+
 #####################
 
 imagem_cinza = cv2.cvtColor(imagem, cv2.COLOR_BGR2GRAY)
 cv2.imwrite("Imagem-cinza.jpg", imagem_cinza)
 
-ret,thresh = cv2.threshold(imagem_cinza, 190, 255, cv2.THRESH_BINARY)
+thresh = cv2.adaptiveThreshold(imagem_cinza, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 91, 12)
+
+#thresh = cv2.medianBlur(thresh,5)
 
 cv2.imwrite("Imagem-binaria.jpg", thresh)
 
@@ -79,7 +87,7 @@ for cnt in contours:
             # A altura e largura é maior que 15px e altura e largura é menor que 300px;
             # O resultado da altura - largura é menor que 15, essa condicional serve...
             # para encontrar figuras geométricas próximas de um quadrado.
-            if (a > 15 and l > 15 and a < 300 and l < 300 and a-l < 15):
+            if (a > 10 and l > 10 and a < 100 and l < 100 and a-l < 15):
                 # cv2.rectangle é responsável por desenhar um retângulo na imagem
 
                 elementos = len(os.listdir("imagens"))
