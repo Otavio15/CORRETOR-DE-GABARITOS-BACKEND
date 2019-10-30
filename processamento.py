@@ -10,9 +10,6 @@ if (tamanho > 0):
     for i in range(tamanho):
         shutil.rmtree('saida/' + str(i))
 
-
-gabarito = {1:"Y", 2:"Y", 3:"Y", 4:"Y", 5:"Y", 6:"Y", 7:"Y", 8:"Y", 9:"Y", 10:"Y", 11:"Y", 12:"Y", 13:"Y", 14:"Y", 15:"Y"}
-
 respostas = {}
 
 flag_resposta = False
@@ -83,9 +80,6 @@ class Processamento():
 
         cv2.imwrite("saida/{}/{}.jpg".format(i,j), img)
 
-        cv2.destroyAllWindows()
-
-
 a1 = len(os.listdir("imagens"))
 
 for i in range(a1):
@@ -102,13 +96,6 @@ for i in range(a1):
         respostas[i] = "Z"
     else:
         flag_resposta = False
-
-tamanho_gabarito = len(gabarito)
-tamanho_resposta = len(respostas)
-
-if (tamanho_gabarito > tamanho_resposta):
-    for i in range(tamanho_resposta, tamanho_gabarito+1):
-        respostas[i] = "Y"
 
 try:
     with open('dados.json', 'w') as fp:

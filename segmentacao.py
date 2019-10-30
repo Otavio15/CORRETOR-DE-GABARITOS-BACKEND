@@ -95,7 +95,7 @@ for cnt in contours:
                 if (aux_y == -1):
                     criarPasta()
                     cv2.rectangle(imagem_aux, (x, y), (x + a, y + l), (255, 255, 255), 2)
-                    cv2.rectangle(imagem, (x, y), (x + a, y + l), (0, 0, 255), 2)
+                    cv2.rectangle(imagem, (x, y), (x + a, y + l), (0, 255, 255), 2)
                 else:
                     if (y in range(aux_y-5, aux_y+5)):
                         if (flag_cor == False):
@@ -157,6 +157,8 @@ conjunto_elementos.sort(key=lambda x: x.pasta)
 aux = 1
 contador = 0
 tamanho = len(os.listdir("imagens"))
+
+del(conjunto_elementos[0])
 
 for i in range(len(conjunto_elementos)):
 

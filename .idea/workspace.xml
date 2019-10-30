@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/Imagem-reconhecida.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Imagem-reconhecida.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dados.json" beforeDir="false" afterPath="$PROJECT_DIR$/dados.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gabarito.png" beforeDir="false" afterPath="$PROJECT_DIR$/gabarito.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/0/1.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/0/2.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/0/3.jpg" beforeDir="false" />
@@ -24,6 +25,8 @@
       <change beforePath="$PROJECT_DIR$/imagens/10/2.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/10/3.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/10/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/10/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/10/6.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/11/1.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/11/2.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/11/3.jpg" beforeDir="false" />
@@ -36,7 +39,8 @@
       <change beforePath="$PROJECT_DIR$/imagens/12/4.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/12/5.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/12/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/12/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/13/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/13/2.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/2/1.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/2/2.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/2/3.jpg" beforeDir="false" />
@@ -52,6 +56,9 @@
       <change beforePath="$PROJECT_DIR$/imagens/4/1.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/4/2.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/4/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/4/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/4/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/4/6.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/5/1.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/5/2.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/5/3.jpg" beforeDir="false" />
@@ -66,6 +73,10 @@
       <change beforePath="$PROJECT_DIR$/imagens/6/6.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/7/1.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/7/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/7/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/7/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/7/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagens/7/6.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/8/1.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/8/2.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagens/8/3.jpg" beforeDir="false" />
@@ -95,12 +106,20 @@
       <change beforePath="$PROJECT_DIR$/saida/10/2.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/10/3.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/10/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/10/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/10/6.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/11/1.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/11/2.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/11/3.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/11/4.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/11/5.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/11/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/12/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/12/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/12/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/12/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/12/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/12/6.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/2/1.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/2/2.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/2/3.jpg" beforeDir="false" />
@@ -116,6 +135,9 @@
       <change beforePath="$PROJECT_DIR$/saida/4/1.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/4/2.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/4/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/4/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/4/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/4/6.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/5/1.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/5/2.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/5/3.jpg" beforeDir="false" />
@@ -128,6 +150,12 @@
       <change beforePath="$PROJECT_DIR$/saida/6/4.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/6/5.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/6/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/7/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/7/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/7/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/7/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/7/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saida/7/6.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/8/1.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/8/2.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saida/8/3.jpg" beforeDir="false" />
@@ -186,7 +214,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.TesseractOCRX">
+  <component name="RunManager" selected="Python.api">
     <configuration name="TesseractOCRX" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -294,9 +322,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.TesseractOCRX" />
         <item itemvalue="Python.api" />
         <item itemvalue="Python.testwe" />
+        <item itemvalue="Python.TesseractOCRX" />
         <item itemvalue="Python.teste" />
         <item itemvalue="Python.haarcascade" />
       </list>

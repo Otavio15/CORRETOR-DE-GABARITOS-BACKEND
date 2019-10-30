@@ -18,9 +18,7 @@ def upload_file():
 		if request.files:
 			image = request.files["image"]
 			image.save(os.path.join(app.config["IMAGE_UPLOADS"], image.filename))
-			time.sleep(2)
 			import segmentacao
-			time.sleep(3)
 			return json.load(open("dados.json"))
 
 if __name__ == "__main__":
