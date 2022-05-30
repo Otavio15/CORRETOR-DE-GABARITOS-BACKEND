@@ -3,8 +3,74 @@ import cv2
 import os
 import shutil
 
+class Processamento():
+
+    def __init__(self):
+        pass
+
+    def leituraImg(self, path_img, i, j):
+
+        flag = False
+
+        classificador = cv2.CascadeClassifier("cascade.xml")
+
+        img = cv2.imread(path_img+".jpg")
+
+        # amplia a imagem da placa em 4
+        img = cv2.resize(img, None, fx=4, fy=4, interpolation=cv2.INTER_CUBIC);
+        #cv2.imshow("ENTRADA", img)
+
+        # Converte para escala de cinza
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        # cv2.imshow("Escala Cinza", img)
+
+        # Binariza imagem
+        img = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 91, 40)
+        #cv2.imshow("Limiar", img)
+
+        # Desfoque na Imagem
+        img = cv2.GaussianBlur(img, (5, 5), 0)
+        # cv2.imshow("Desfoque", img)
+
+        faces_detectadas = classificador.detectMultiScale(img, scaleFactor=1.05)
+
+        for (x, y, a, l) in faces_detectadas:
+            # img_capturada retorna a região desenhada da face encontrada
+
+            if (j != 1 and i != 0):
+                global respostas, flag_resposta
+                if (j == 2 and flag == False):
+                    respostas[i] = "A"
+                    flag = True
+                    flag_resposta = True
+                    cv2.rectangle(img, (x, y), (x + a, y + l), (0, 255, 0), 2)
+                elif (j == 3 and flag == False):
+                    respostas[i] = "B"
+                    flag = True
+                    flag_resposta = True
+                    cv2.rectangle(img, (x, y), (x + a, y + l), (0, 255, 0), 2)
+                elif (j == 4 and flag == False):
+                    respostas[i] = "C"
+                    flag = True
+                    flag_resposta = True
+                    cv2.rectangle(img, (x, y), (x + a, y + l), (0, 255, 0), 2)
+                elif (j == 5 and flag == False):
+                    respostas[i] = "D"
+                    flag = True
+                    flag_resposta = True
+                    cv2.rectangle(img, (x, y), (x + a, y + l), (0, 255, 0), 2)
+                elif (j == 6 and flag == False):
+                    respostas[i] = "E"
+                    flag = True
+                    flag_resposta = True
+                    cv2.rectangle(img, (x, y), (x + a, y + l), (0, 255, 0), 2)
+
+
+        cv2.imwrite("saida/{}/{}.jpg".format(i,j), img)
+
 class Ordem:
     def __init__(self, pasta, subpasta, valorx, imagem):
+        print('Pasta {}, Subpasta {}, Valor X {}'.format(pasta, subpasta, valorx))
         self.pasta = pasta
         self.subpasta = subpasta
         self.valorx = valorx
@@ -25,7 +91,6 @@ imagem = cv2.imread(arquivo)
 imagem_aux = cv2.imread(arquivo)
 
 #####################
-
 height = imagem.shape[0]
 width = imagem.shape[1]
 
@@ -37,14 +102,12 @@ if (height > width):
 
 imagem = cv2.resize(imagem, (width, height), interpolation = cv2.INTER_CUBIC)
 imagem_aux = cv2.resize(imagem_aux, (width, height), interpolation = cv2.INTER_CUBIC)
-
 #####################
 
 imagem_cinza = cv2.cvtColor(imagem, cv2.COLOR_BGR2GRAY)
 cv2.imwrite("Imagem-cinza.jpg", imagem_cinza)
 
 thresh = cv2.adaptiveThreshold(imagem_cinza, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 91, 20)
-
 thresh = cv2.medianBlur(thresh,5)
 
 cv2.imwrite("Imagem-binaria.jpg", thresh)
@@ -61,11 +124,6 @@ aux_y = -1
 flag_cor = False
 
 dados = 0
-
-def criarPasta():
-    global contador_pastas
-    os.mkdir('imagens/' + str(contador_pastas))
-    contador_pastas += 1
 
 for cnt in contours:
 
@@ -93,14 +151,14 @@ for cnt in contours:
                 elementos = len(os.listdir("imagens"))
 
                 if (aux_y == -1):
-                    criarPasta()
+                    contador_pastas += 1
                     cv2.rectangle(imagem_aux, (x, y), (x + a, y + l), (255, 255, 255), 2)
                     cv2.rectangle(imagem, (x, y), (x + a, y + l), (0, 255, 255), 2)
                 else:
                     if (y in range(aux_y-5, aux_y+5)):
                         if (flag_cor == False):
                             if aux_contador_pastas == False:
-                                criarPasta()
+                                contador_pastas += 1
                                 aux_contador_pastas = True
 
                             cv2.rectangle(imagem_aux, (x, y), (x + a, y + l), (255, 255, 255), 2)
@@ -108,7 +166,7 @@ for cnt in contours:
 
                         else:
                             if aux_contador_pastas == True:
-                                criarPasta()
+                                contador_pastas += 1
                                 aux_contador_pastas = False
 
                             cv2.rectangle(imagem_aux, (x, y), (x + a, y + l), (255, 255, 255), 2)
@@ -117,7 +175,7 @@ for cnt in contours:
                     else:
                         if (flag_cor == False):
                             if aux_contador_pastas == True:
-                                criarPasta()
+                                contador_pastas += 1
                                 aux_contador_pastas = False
 
                             cv2.rectangle(imagem_aux, (x, y), (x + a, y + l), (255, 255, 255), 2)
@@ -126,7 +184,7 @@ for cnt in contours:
 
                         else:
                             if aux_contador_pastas == False:
-                                criarPasta()
+                                contador_pastas += 1
                                 aux_contador_pastas = True
 
                             cv2.rectangle(imagem_aux, (x, y), (x + a, y + l), (255, 255, 255), 2)
@@ -160,16 +218,3 @@ tamanho = len(os.listdir("imagens"))
 
 del(conjunto_elementos[0])
 
-for i in range(len(conjunto_elementos)):
-
-    if (aux == conjunto_elementos[i].pasta):
-        contador += 1
-    else:
-        aux = conjunto_elementos[i].pasta
-        contador = 1
-
-    x = conjunto_elementos[i].pasta
-    valor = tamanho-x-1
-    cv2.imwrite("imagens/" + str(valor) + "/" + str(contador) + ".jpg", conjunto_elementos[i].imagem)
-
-import processamento

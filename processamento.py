@@ -23,7 +23,6 @@ class Processamento():
 
         flag = False
 
-        quant = len(os.listdir("imagens"));
         classificador = cv2.CascadeClassifier("cascade.xml")
 
         img = cv2.imread(path_img+".jpg")
