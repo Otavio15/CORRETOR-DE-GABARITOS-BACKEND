@@ -1,5 +1,15 @@
 
-# Software para correção de gabaritos 
+# Software para correção de gabaritos
+
+--------------
+
+##### Para instalar as dependências basta executar os comandos:
+ 
+    pip install opencv-python
+
+    pip install flask
+
+--------------
 
 A parte **back-end** do sistema de correção de gabaritos foi desenvolvido utilizando a linguagem de programação **Python** e a biblioteca **OpenCV**, a **API** para comunicação com o front-end foi desenvolvido utilizando a biblioteca **Flask** da linguagem de programação **Python**.
 
