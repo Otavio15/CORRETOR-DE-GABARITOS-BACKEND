@@ -21,6 +21,8 @@ O **front-end** foi desenvolvido utilizando o framework **flutter** e a linguage
 
 ![Alt Text](https://github.com/Otavio15/CORRETOR-DE-GABARITOS-BACKEND/blob/master/GIF.gif?raw=true)
 
+![Alt Text](https://raw.githubusercontent.com/Otavio15/CORRETOR-DE-GABARITOS-BACKEND/master/example_api.png)
+
 ## Link para o material completo do sistema.
 
 https://drive.google.com/file/d/12xuWXb5PsLNDZq0D1YyVKoLXalXtxD_Q/view?usp=sharing
