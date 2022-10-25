@@ -1,7 +1,15 @@
+
+# Código para reconhecimento, segmentação e processamento digital de imagens
+# https://drive.google.com/file/d/12xuWXb5PsLNDZq0D1YyVKoLXalXtxD_Q/view
+# Recomendado que a borda do gabarito tenha 1 pixel de largura
+
+
 import json
+
 import cv2
-from flask import Flask, request, make_response
 import numpy as np
+from flask import Flask, make_response, request
+
 
 class Ordem:
     def __init__(self, pasta, subpasta, valorx, imagem, coordenadas, xy):
@@ -13,9 +21,11 @@ class Ordem:
         self.coordenadas = coordenadas
         self.xy = xy
 
+
 classificador = cv2.CascadeClassifier("cascade.xml")
 app = Flask(__name__)
 app.config["IMAGE_UPLOADS"] = "/home/otavio/Desktop"
+
 
 @app.route("/resultado", methods=['GET', 'POST'])
 def index():
@@ -39,7 +49,7 @@ def upload_file():
             height = imagem.shape[0]
             width = imagem.shape[1]
 
-            print('height da imagem {} / width da imagem {}'.format(height,width))
+            print('height da imagem {} / width da imagem {}'.format(height, width))
 
             if (height > width):
                 while (width > 600):
@@ -47,12 +57,17 @@ def upload_file():
                     width -= int(width / 5)
                     # print("Altura {}, largura {}".format(height,width))
 
-            imagem = cv2.resize(imagem, (width, height), interpolation=cv2.INTER_CUBIC)
-            imagem_aux = cv2.resize(imagem_aux, (width, height), interpolation=cv2.INTER_CUBIC)
+            imagem = cv2.resize(imagem, (width, height),
+                                interpolation=cv2.INTER_CUBIC)
+            imagem_aux = cv2.resize(
+                imagem_aux, (width, height), interpolation=cv2.INTER_CUBIC)
             imagem_cinza = cv2.cvtColor(imagem, cv2.COLOR_BGR2GRAY)
-            thresh = cv2.adaptiveThreshold(imagem_cinza, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 91, int(valuethreshold))
-            thresh = cv2.medianBlur(thresh, 5) # imagem binária, só tem preto e branco
-            contours, h = cv2.findContours(thresh, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
+            thresh = cv2.adaptiveThreshold(
+                imagem_cinza, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 91, int(valuethreshold))
+            # imagem binária, só tem preto e branco
+            thresh = cv2.medianBlur(thresh, 5)
+            contours, h = cv2.findContours(
+                thresh, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
             contador = 0
             aux_y = -1
             flag_cor = False
@@ -85,8 +100,10 @@ def upload_file():
 
                             if (aux_y == -1):
                                 contador_pastas += 1
-                                cv2.rectangle(imagem_aux, (x, y), (x + a, y + l), (255, 255, 255), 2)
-                                cv2.rectangle(imagem, (x, y), (x + a, y + l), (0, 255, 255), 2)
+                                cv2.rectangle(imagem_aux, (x, y),
+                                              (x + a, y + l), (255, 255, 255), 2)
+                                cv2.rectangle(imagem, (x, y),
+                                              (x + a, y + l), (0, 255, 255), 2)
                             else:
                                 if (y in range(aux_y - 5, aux_y + 5)):
                                     if (flag_cor == False):
@@ -94,16 +111,20 @@ def upload_file():
                                             contador_pastas += 1
                                             aux_contador_pastas = True
 
-                                        cv2.rectangle(imagem_aux, (x, y), (x + a, y + l), (255, 255, 255), 2)
-                                        cv2.rectangle(imagem, (x, y), (x + a, y + l), (0, 255, 0), 2)
+                                        cv2.rectangle(
+                                            imagem_aux, (x, y), (x + a, y + l), (255, 255, 255), 2)
+                                        cv2.rectangle(
+                                            imagem, (x, y), (x + a, y + l), (0, 255, 0), 2)
 
                                     else:
                                         if aux_contador_pastas == True:
                                             contador_pastas += 1
                                             aux_contador_pastas = False
 
-                                        cv2.rectangle(imagem_aux, (x, y), (x + a, y + l), (255, 255, 255), 2)
-                                        cv2.rectangle(imagem, (x, y), (x + a, y + l), (0, 0, 255), 2)
+                                        cv2.rectangle(
+                                            imagem_aux, (x, y), (x + a, y + l), (255, 255, 255), 2)
+                                        cv2.rectangle(
+                                            imagem, (x, y), (x + a, y + l), (0, 0, 255), 2)
 
                                 else:
                                     if (flag_cor == False):
@@ -111,8 +132,10 @@ def upload_file():
                                             contador_pastas += 1
                                             aux_contador_pastas = False
 
-                                        cv2.rectangle(imagem_aux, (x, y), (x + a, y + l), (255, 255, 255), 2)
-                                        cv2.rectangle(imagem, (x, y), (x + a, y + l), (0, 0, 255), 2)
+                                        cv2.rectangle(
+                                            imagem_aux, (x, y), (x + a, y + l), (255, 255, 255), 2)
+                                        cv2.rectangle(
+                                            imagem, (x, y), (x + a, y + l), (0, 0, 255), 2)
                                         flag_cor = True
 
                                     else:
@@ -120,8 +143,10 @@ def upload_file():
                                             contador_pastas += 1
                                             aux_contador_pastas = True
 
-                                        cv2.rectangle(imagem_aux, (x, y), (x + a, y + l), (255, 255, 255), 2)
-                                        cv2.rectangle(imagem, (x, y), (x + a, y + l), (0, 255, 0), 2)
+                                        cv2.rectangle(
+                                            imagem_aux, (x, y), (x + a, y + l), (255, 255, 255), 2)
+                                        cv2.rectangle(
+                                            imagem, (x, y), (x + a, y + l), (0, 255, 0), 2)
                                         flag_cor = False
 
                             aux_y = y
@@ -137,7 +162,8 @@ def upload_file():
                                 aux_aux_contador_pasta = aux_contador_pastas
                             # ++++++++++++++++++++++++++++++++++++++
 
-                            dados = Ordem(contador_pastas - 1, contador, x, roi, (x + a, y + l), (x, y))
+                            dados = Ordem(contador_pastas - 1, contador,
+                                          x, roi, (x + a, y + l), (x, y))
                             conjunto_elementos.append(dados)
 
             conjunto_elementos.sort(key=lambda x: x.valorx)
@@ -166,7 +192,8 @@ def upload_file():
                     img = i.imagem
 
                     # amplia a imagem da placa em 4
-                    img = cv2.resize(img, None, fx=4, fy=4, interpolation=cv2.INTER_CUBIC);
+                    img = cv2.resize(img, None, fx=4, fy=4,
+                                     interpolation=cv2.INTER_CUBIC)
                     # cv2.imshow("ENTRADA", img)
 
                     # Converte para escala de cinza
@@ -174,56 +201,66 @@ def upload_file():
                     # cv2.imshow("Escala Cinza", img)
 
                     # Binariza imagem
-                    img = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 91, 40)
+                    img = cv2.adaptiveThreshold(
+                        img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 91, 40)
                     # cv2.imshow("Limiar", img)
 
                     # Desfoque na Imagem
                     img = cv2.GaussianBlur(img, (5, 5), 0)
                     # cv2.imshow("Desfoque", img)
-                    faces_detectadas = classificador.detectMultiScale(img, scaleFactor=1.05)
+                    faces_detectadas = classificador.detectMultiScale(
+                        img, scaleFactor=1.05)
                     for (x, y, a, l) in faces_detectadas:
                         # img_capturada retorna a região desenhada da face encontrada
                         if i.pasta not in list(respostas.keys()):
-                            cv2.rectangle(imagem, i.xy, i.coordenadas, (0, 0, 0), -1)
+                            cv2.rectangle(
+                                imagem, i.xy, i.coordenadas, (0, 0, 0), -1)
                             #print('Pasta {}/{}'.format(i.pasta, contador))
                             #cv2.imshow('teste', imagem)
-                            #cv2.waitKey()
+                            # cv2.waitKey()
 
                             if (contador == 1):
                                 respostas[i.pasta] = "A"
                                 flag = True
                                 flag_resposta = True
-                                cv2.rectangle(imagem, i.xy, i.coordenadas, (230, 0, 230), -1)
+                                cv2.rectangle(
+                                    imagem, i.xy, i.coordenadas, (230, 0, 230), -1)
                             elif (contador == 2):
                                 respostas[i.pasta] = "B"
                                 flag = True
                                 flag_resposta = True
-                                cv2.rectangle(imagem, i.xy, i.coordenadas, (230, 0, 230), -1)
+                                cv2.rectangle(
+                                    imagem, i.xy, i.coordenadas, (230, 0, 230), -1)
                             elif (contador == 3):
                                 respostas[i.pasta] = "C"
                                 flag = True
                                 flag_resposta = True
-                                cv2.rectangle(imagem, i.xy, i.coordenadas, (230, 0, 230), -1)
+                                cv2.rectangle(
+                                    imagem, i.xy, i.coordenadas, (230, 0, 230), -1)
                             elif (contador == 4):
                                 respostas[i.pasta] = "D"
                                 flag = True
                                 flag_resposta = True
-                                cv2.rectangle(imagem, i.xy, i.coordenadas, (230, 0, 230), -1)
+                                cv2.rectangle(
+                                    imagem, i.xy, i.coordenadas, (230, 0, 230), -1)
                             elif (contador == 5):
                                 respostas[i.pasta] = "E"
                                 flag = True
                                 flag_resposta = True
-                                cv2.rectangle(imagem, i.xy, i.coordenadas, (230, 0, 230), -1)
+                                cv2.rectangle(
+                                    imagem, i.xy, i.coordenadas, (230, 0, 230), -1)
                             elif (contador == 6):
                                 respostas[i.pasta] = "F"
                                 flag = True
                                 flag_resposta = True
-                                cv2.rectangle(imagem, i.xy, i.coordenadas, (230, 0, 230), -1)
+                                cv2.rectangle(
+                                    imagem, i.xy, i.coordenadas, (230, 0, 230), -1)
                             elif (contador == 7):
                                 respostas[i.pasta] = "G"
                                 flag = True
                                 flag_resposta = True
-                                cv2.rectangle(imagem, i.xy, i.coordenadas, (230, 0, 230), -1)
+                                cv2.rectangle(
+                                    imagem, i.xy, i.coordenadas, (230, 0, 230), -1)
 
                             #print('Resultadoo: {}'.format(respostas))
 
@@ -236,13 +273,14 @@ def upload_file():
         for key, value in respostas.items():
             if contador_pastas - (key + 1) > 0:
                 new_result[contador_pastas - (key + 1)] = value
-                print('Chave {}, valor {}, tamanho {}, contador pasta {}, resultado {}'.format((key + 1), value, len(respostas) - 1, contador_pastas - 1, contador_pastas - (key + 1)))
+                print('Chave {}, valor {}, tamanho {}, contador pasta {}, resultado {}'.format(
+                    (key + 1), value, len(respostas) - 1, contador_pastas - 1, contador_pastas - (key + 1)))
 
         #print('Resultadoo: {}'.format(new_result))
 
         print('Novo resultado {}'.format(new_result))
         #cv2.imshow('teste', imagem)
-        #cv2.waitKey()
+        # cv2.waitKey()
         if flag_return == 'image':
             retval, buffer = cv2.imencode('.png', imagem)
             response = make_response(buffer.tobytes())
@@ -259,7 +297,7 @@ def upload_file():
             response.headers['Content-Type'] = 'image/png'
             return response
         else:
-            return json.dumps(new_result, indent = 4)
+            return json.dumps(new_result, indent=4)
 
 
 if __name__ == "__main__":
