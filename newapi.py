@@ -41,7 +41,7 @@ def upload_file():
             image = request.files["image"]
             flag_return = request.form['flag']
             valuethreshold = request.form['valuethreshold']
-            npimg = np.fromfile(image)
+            npimg = np.fromfile(image, dtype=np.uint8)
             imagem = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
             imagem_aux = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
             conjunto_elementos = []
