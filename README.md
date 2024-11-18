@@ -10,6 +10,11 @@
     pip install flask
 
 --------------
+opencv-contrib-python==4.8.1.78
+opencv-python==4.8.1.78
+mypy==0.910
+mypy-extensions==0.4.3
+Flask==2.2.5
 
 A parte **back-end** do sistema de correção de gabaritos foi desenvolvido utilizando a linguagem de programação **Python** e a biblioteca **OpenCV**, a **API** para comunicação com o front-end foi desenvolvido utilizando a biblioteca **Flask** da linguagem de programação **Python**.
 
